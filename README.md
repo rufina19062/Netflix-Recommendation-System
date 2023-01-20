@@ -11,11 +11,11 @@ you can view our presentation [here](https://docs.google.com/presentation/d/1m54
 
 Movie/Tv show is visual entertain created in 19th century that can also use as education and represent social issues. There is a lot type of movies and Tv shows in now days. We can also watch it in many platform, spacially in online platform. There is many streaming platform for us to watch movies and Tv shows, one of the famous streaming platform is Netflix. [Netflix](https://about.netflix.com/en) was created in 1998 as a DVD rental and sales site and in 2007 you can use Netflix as streaming platform allowing members to instantly watch movies and TV shows. Netflix have recommendation system to predict future choice for membership to watch. This method can increase membership loyalty because Netflix can give them something they like to watch. 
 
-Recommendation system is a [[1]](https://dl.ucsc.cmb.ac.lk/jspui/bitstream/123456789/4596/1/2018%20BA%20033.pdf) Sudasinghe, P.G. (2019). Enhancing Book Recommendation with the use of Reviews. Sri Lanka: University of Colombo School of Computing.
+Recommendation system is a algorithm to provide item suggestions to users of certain systems. an example of an item is products available for purchase in an e-commerce system, music available in a streaming service, or a news article in a news website. There are 3 types of recommendation system methods, which consist of Content-Based Filtering, Collaborative Filtering and Hybrid Filtering.
 
-Content-based Filtering 
-[[2]](https://iopscience.iop.org/article/10.1088/1742-6596/1000/1/012101/pdf) Geetha, G., Safa, M., Fancy, C., & Saranya, D. (2018, April).A hybrid approach using collaborative filtering and content based filtering for recommender system. In Journal of Physics: Conference Series (Vol. 1000, No. 1, p. 012101). IOP Publishing. DOI:10.1088/1742-6596/1000/1/012101.
-[[3]](http://singhal.info/ieee2001.pdf) Singhal A 2001 Modern Information Retrieval: A Brief Overview Bulletin of the Technical Committee on Data Engineering pp 35–43.
+This project we are using the Content-Based Filtering. This method is utilize two data sources to make recommendations with product's rating that user has been given.
+So, in this recommendation system we must use rating history of user also searching for matching attributes of items against the Content-based recommender systems [[1]](https://dl.ucsc.cmb.ac.lk/jspui/bitstream/123456789/4596/1/2018%20BA%20033.pdf).
+One of model of Content-Based method is Cosine Similarity. This model is calculated from two vector as a measure of divergence between the vectors, and cosine of the angle is used as the numeric similarity. Similarity measure is usually using the inner-product (or dot-product) between two vectors and if all the vectors are forced to be unit length, then the cosine of the angle between two vectors is same as their dot-product. [[2]](http://singhal.info/ieee2001.pdf)
 
 
 ## **Business Statement**
@@ -90,9 +90,9 @@ Netflix dataset have missing values in:
 There are more movies titles than TV show titles in Netflix. This is proofen by the persentage rates of types of titles which has 69.7% movies titiles and the rest is TV show titles.
 Exploratory netflix data divided into 2 dataset, which is netflix titles for TV show and netflix titles for movies
 - Top Rating
-![Top 5 ratings movies](https://user-images.githubusercontent.com/90761863/213623100-fb2c9609-f4c4-40b7-bc4b-6b39be14c684.png)
+![image](https://user-images.githubusercontent.com/90761863/213671511-9680b18f-a196-4691-9e94-3b861b1dfaa3.png)
 
-![image](https://user-images.githubusercontent.com/90761863/213612440-4c80e27d-f555-4355-a35f-a6b8c97191ea.png)
+![image](https://user-images.githubusercontent.com/90761863/213671543-58cfa801-5c31-442f-9b82-91179aaaed42.png)
 
 Figure 1. Barplot of rating
 
@@ -108,7 +108,7 @@ So it can be concluded that the majority of streaming services provided by Netfl
 
 - Top Release Year
 
-![image](https://user-images.githubusercontent.com/90761863/213612462-fff8b3ad-fbdc-485b-a137-e35836648a64.png)
+![image](https://user-images.githubusercontent.com/90761863/213671631-90b37082-6ce7-4c79-8294-e8cdddb329fd.png)
 
 ![image](https://user-images.githubusercontent.com/90761863/213612474-4137cd7c-600b-452f-9ea1-125df69cd4da.png)
 
@@ -132,10 +132,6 @@ The TV Show genres most often released by Netflix are International TV, romantic
 
 ![image](https://user-images.githubusercontent.com/90761863/213612548-6b4dd41c-81b3-4cd5-ba8c-05032bfb703b.png)
 
-![image](https://user-images.githubusercontent.com/90761863/213612558-2a956619-9740-4975-8645-6813526bbcfa.png)
-
-![image](https://user-images.githubusercontent.com/90761863/213612570-8afdbeda-d271-4e5e-9cb1-b48193ba0895.png)
-
 Based on the 782 countries that have contributed to their work on the Netflix streaming service, there are 3 countries that have contributed the most, namely the United States with 2,818 Movie/TV Shows, followed by the United Kingdom and India.
 The three countries have a sizable contribution to Netflix, this data can represent that Netflix users are more interested in streaming movies and TV shows from these three countries. So that based on the information obtained, it can be used as a reference for future decision making.
 
@@ -143,10 +139,15 @@ The three countries have a sizable contribution to Netflix, this data can repres
 ## **Build Model with Cosine Similarity**
 
 
+
 ## **Conclusion**
+1. The most rating categories in Netflix are TV-MA and TV-14. So it can be concluded that the majority of streaming services provided by Netflix have TV-MA and TV-14 rating categories. And there is a possibility that Netflix users are over 14 years old.
+2. The actual release year of the film is mostly in 2017 and the actual release year of the TV Show is mostly in 2020. So when compared to Movie streaming, the majority of TV Show streaming services use the latest content.
+3. The most popular Movie/TV Show genres on Netflix are Comedy, Drama, and International Movies/TV Shows. Form 8797 data in the list of Netflix streaming program titles, 362 data are streaming programs with Drama and International Movie genres.  And Based on "Market share for each Genre 1995-2023" released by The Numbers, Drama and Comedy Genres are ranked third and fourth as the most popular genres from 1995-2023 today. 
+4. Top movie production countries are United States, United Kingdom and India. This is supported by data released by The Numbers which states that the United States (US) and United Kingdom (UK) are the two countries that are estimated to be the countries that produce the most Movies/TV Shows (the data will be updated regularly).
+5. Model recommendation system in this dataset is content-based filtering with cosine similarity method. When comparing two text, cosine similarity performs significantly better than both Hybrid and  Collaborative methods. Where we built this model to recommend the Top 10 titles which have similar genre. The model is formed based on the genre of title. We also compare model result between similar genre and similar description, and we have very different result.
 
 
 ## **Reference**
 [[1]](https://dl.ucsc.cmb.ac.lk/jspui/bitstream/123456789/4596/1/2018%20BA%20033.pdf) Sudasinghe, P.G. (2019). Enhancing Book Recommendation with the use of Reviews. Sri Lanka: University of Colombo School of Computing.
-[[2]](https://iopscience.iop.org/article/10.1088/1742-6596/1000/1/012101/pdf) Geetha, G., Safa, M., Fancy, C., & Saranya, D. (2018, April).mA hybrid approach using collaborative filtering and content based filtering for recommender system. In Journal of Physics: Conference Series (Vol. 1000, No. 1, p. 012101). IOP Publishing. DOI:10.1088/1742-6596/1000/1/012101. 
-[[3]](http://singhal.info/ieee2001.pdf) Singhal A 2001 Modern Information Retrieval: A Brief Overview Bulletin of the Technical Committee on Data Engineering pp 35–43.
+[[2]](http://singhal.info/ieee2001.pdf) Singhal A 2001 Modern Information Retrieval: A Brief Overview Bulletin of the Technical Committee on Data Engineering pp 35–43.
