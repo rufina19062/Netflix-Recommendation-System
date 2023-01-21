@@ -104,15 +104,15 @@ So it can be concluded that the majority of streaming services provided by Netfl
 
 
 
-
-
 - Top Release Year
 
 ![image](https://user-images.githubusercontent.com/90761863/213671631-90b37082-6ce7-4c79-8294-e8cdddb329fd.png)
 
 ![image](https://user-images.githubusercontent.com/90761863/213612474-4137cd7c-600b-452f-9ea1-125df69cd4da.png)
 
-The actual release year of the film is mostly in 2017 and the actual release year of the TV Show is mostly in 2020.
+Figure 2. Barplot of Release Year
+
+The actual release year of the film in Figure 2 is mostly in 2017 and the actual release year of the TV Show is mostly in 2020.
 So when compared to Movie streaming, the majority of TV Show streaming services use the latest content.
 
 
@@ -121,31 +121,39 @@ So when compared to Movie streaming, the majority of TV Show streaming services 
 
 ![image](https://user-images.githubusercontent.com/90761863/213612510-365c15e0-da04-47f1-8e8d-a7f61302435e.png)
 
-The film genres most often released by Netflix are drama, comedy, action and international movies. Based on 8797 data in the list of Netflix streaming program titles, 362 data are streaming programs with Drama and International Movie genres.
+Figure 3. Top Movie Genre
+
+The film genres in Figure 3 most often released by Netflix are drama, comedy, action and international movies. Based on 8797 data in the list of Netflix streaming program titles, 362 data are streaming programs with Drama and International Movie genres.
 
 ![image](https://user-images.githubusercontent.com/90761863/213612526-d0b04572-1d05-4efc-8307-b2c15f41c689.png)
 
-The TV Show genres most often released by Netflix are International TV, romantic, comedies, Kid's TV, and drama. The Wordcloud provides information that one of the reasons Netflix is more attractive to users is because the genre of the program being broadcast is an international genre.
+Figure 4. Top TV Show Genre
+
+The TV Show genres in Figure 4 most often released by Netflix are International TV, romantic, comedies, Kid's TV, and drama. The Wordcloud provides information that one of the reasons Netflix is more attractive to users is because the genre of the program being broadcast is an international genre.
 
 
 - Top Country
 
 ![image](https://user-images.githubusercontent.com/90761863/213612548-6b4dd41c-81b3-4cd5-ba8c-05032bfb703b.png)
 
-Based on the 782 countries that have contributed to their work on the Netflix streaming service, there are 3 countries that have contributed the most, namely the United States with 2,818 Movie/TV Shows, followed by the United Kingdom and India.
+Figure 5. Barplot of Top Country
+
+Figure 5 show that based on the 782 countries that have contributed to their work on the Netflix streaming service, there are 3 countries that have contributed the most, namely the United States with 2,818 Movie/TV Shows, followed by the United Kingdom and India.
 The three countries have a sizable contribution to Netflix, this data can represent that Netflix users are more interested in streaming movies and TV shows from these three countries. So that based on the information obtained, it can be used as a reference for future decision making.
 
 
 ## **Build Model with Cosine Similarity**
+This project analyze similiarity of movies and TV shows genre to predict 10 titles. Therefore, we are building cosine similarity model to predict those titles. Cosine similarity compare two document with measure similarity between the query vector and the document vector.  If D~is the document vector and Q~is the query vector, then the similarity of document D to query Q (or score of D for Q) can be represented as:
+
+![image](https://user-images.githubusercontent.com/90761863/213841933-b60a28a8-226e-452c-9c3f-9a5300632c4b.png)
+
+where ![image](https://user-images.githubusercontent.com/90761863/213856130-af72145c-e379-4684-9274-9b68375dbf87.png) is the value of the *ith* component in the query vector ![image](https://user-images.githubusercontent.com/90761863/213856574-ba4ac44e-49f4-4877-9453-e2fd8c1d03a0.png), and ![image](https://user-images.githubusercontent.com/90761863/213856797-cd1cc68e-e376-47b6-8046-ab4ba4efa8c5.png) is the *ith* component in the document vector ![image](https://user-images.githubusercontent.com/90761863/213857071-a78de473-97fa-40af-a60f-e31f95be82e9.png)
+. (Since any word not present in either the query or the document has a ![image](https://user-images.githubusercontent.com/90761863/213856236-14d15159-55a8-4adb-8239-b6ea9f035ebd.png) or wtiD value of 0, respectively, we can do the summation only over the terms common in the query and the document.) How we arrive at ![image](https://user-images.githubusercontent.com/90761863/213856236-14d15159-55a8-4adb-8239-b6ea9f035ebd.png) and ![image](https://user-images.githubusercontent.com/90761863/213856863-16e8b68b-ae3d-4f86-890a-03b91563eb8f.png) is not defined by the model, but is quite critical to the search effectiveness of an IR system. ![image](https://user-images.githubusercontent.com/90761863/213856915-04076b8a-9e2a-417d-9e99-cb47619ae3af.png) is often referred to as the weight of term-*i* in document *D*[[2]](http://singhal.info/ieee2001.pdf).
 
 
 
 ## **Conclusion**
-1. The most rating categories in Netflix are TV-MA and TV-14. So it can be concluded that the majority of streaming services provided by Netflix have TV-MA and TV-14 rating categories. And there is a possibility that Netflix users are over 14 years old.
-2. The actual release year of the film is mostly in 2017 and the actual release year of the TV Show is mostly in 2020. So when compared to Movie streaming, the majority of TV Show streaming services use the latest content.
-3. The most popular Movie/TV Show genres on Netflix are Comedy, Drama, and International Movies/TV Shows. Form 8797 data in the list of Netflix streaming program titles, 362 data are streaming programs with Drama and International Movie genres.  And Based on "Market share for each Genre 1995-2023" released by The Numbers, Drama and Comedy Genres are ranked third and fourth as the most popular genres from 1995-2023 today. 
-4. Top movie production countries are United States, United Kingdom and India. This is supported by data released by The Numbers which states that the United States (US) and United Kingdom (UK) are the two countries that are estimated to be the countries that produce the most Movies/TV Shows (the data will be updated regularly).
-5. Model recommendation system in this dataset is content-based filtering with cosine similarity method. When comparing two text, cosine similarity performs significantly better than both Hybrid and  Collaborative methods. Where we built this model to recommend the Top 10 titles which have similar genre. The model is formed based on the genre of title. We also compare model result between similar genre and similar description, and we have very different result.
+The conclusion of this project is where we built this model to recommend the Top 10 titles which have similar genre. The model is formed based on the genre of title. We also compare model result between similar genre and similar description, and we have very different result.
 
 
 ## **Reference**
