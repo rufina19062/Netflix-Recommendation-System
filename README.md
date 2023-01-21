@@ -143,7 +143,7 @@ The three countries have a sizable contribution to Netflix, this data can repres
 
 
 ## **Build Model with Cosine Similarity**
-This project analyze similiarity of movies and TV shows genre to predict 10 titles. Therefore, we are building cosine similarity model to predict those titles. Cosine similarity compare two document with measure similarity between the query vector and the document vector.  If D~is the document vector and Q~is the query vector, then the similarity of document D to query Q (or score of D for Q) can be represented as:
+This project analyze similiarity of movies and TV shows genre to predict 10 titles. Therefore, we are building cosine similarity model to predict those titles. Cosine similarity compare two document with measure similarity between the query vector and the document vector.  If ![image](https://user-images.githubusercontent.com/90761863/213857071-a78de473-97fa-40af-a60f-e31f95be82e9.png) is the document vector and ![image](https://user-images.githubusercontent.com/90761863/213856574-ba4ac44e-49f4-4877-9453-e2fd8c1d03a0.png) is the query vector, then the similarity of document D to query Q (or score of D for Q) can be represented as: 
 
 ![image](https://user-images.githubusercontent.com/90761863/213841933-b60a28a8-226e-452c-9c3f-9a5300632c4b.png)
 
